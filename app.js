@@ -3,7 +3,7 @@ Vue.createApp({
         return {
             message: 'Hello Rama!',
             todo: '',
-
+            listTodo: []
         }
     },
 
@@ -27,11 +27,13 @@ Vue.createApp({
             }
         },
 
-        markTodo(index) {
+        markDoneTodo(index) {
             this.listTodo[index].isDone = !this.listTodo[index].isDone;
+            window.localStorage.setItem('todo', JSON.stringify(this.listTodo));
         },
         deleteTodo(index) {
             this.listTodo.splice(index, 1);
+            window.localStorage.setItem('todo', JSON.stringify(this.listTodo));
         },
     },
 }).mount('#app')

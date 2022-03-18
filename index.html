@@ -14,24 +14,23 @@
         <h1>ToDo App</h1>
         <p>{{ message }}</p>
         <input  type="text" placeholder="Todo kamu ..." v-model="todo">
-        {{ todo }}
         <button @click="addTodo()">Tambah todo</button>
 
         <table>
             <thead>
                 <tr >
-                    <td>TODO</td>
-                    <td>AKSI</td>
+                    <th>TODO</th>
+                    <th>AKSI</th>
                 </tr>
             </thead>
             
             <tbody>
-                <tr v-for="(todo,index) in ListTodo" v-bind:key="index">
+                <tr v-for="(todo, index) in listTodo"v-bind:key="index">
                     <td v-bind:style="{'text-decoration': todo.isDone?'line-through' : null}">
-                        {{ todo.name }}
+                    {{ todo.name }}
                     </td>
                     <td>
-                        <button @click="markTodo(index)">{{ todo.isDone? 'Done' : 'Undone' }}</button>
+                        <button @click="markDoneTodo(index)">{{ todo.isDone? 'Undone' : 'Done' }}</button>
                         <button style="margin-left: 16px;" @click="deleteTodo(index)">Hapus</button>
                     </td>
                 </tr>
