@@ -1,6 +1,6 @@
 # Vue Todo
 Aplikasi todo sederhana menggunakan vuejs
 
-Nama	: nama_saya <br>
-Kelas	: kelas_saya <br>
-NIM 	: nim_saya <br>
+Nama	: Rama Sanjaya <br>
+Kelas	: D3IF 45-04 <br>
+NIM 	: 6706213021 <br>
